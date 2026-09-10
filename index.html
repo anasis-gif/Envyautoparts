@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Envy Motorparts — Tested Used &amp; OEM Auto Parts</title>
+<meta name="description" content="Quality used and OEM auto parts sourced, tested, and shipped nationwide across the US. Request a quote and hear back from the owner directly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5H43L39 13H18L16 18H37L33 25H13L10 33H31L25 42H4L8 30L14 17L8 17L4 26L8 5Z" fill="currentColor"/>
+          <path d="M18 18H37L34 23H16L18 18ZM13 28H32L29 33H11L13 28Z" fill="#090A0C"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">ENVY</span>
+        <span class="brand-sub">AUTO PARTS</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#top">Home</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#why-us">Why us</a>
+      <a href="#process">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="phone-link" href="tel:+15551023847">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8C8.1 13.8 10.2 15.9 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 14.9C17.7 15.3 19 15.5 20.3 15.5C20.9 15.5 21.3 15.9 21.3 16.5V20.3C21.3 20.9 20.9 21.3 20.3 21.3C10.7 21.3 2.7 13.3 2.7 3.7C2.7 3.1 3.1 2.7 3.7 2.7H7.5C8.1 2.7 8.5 3.1 8.5 3.7C8.5 5 8.7 6.3 9.1 7.5C9.2 7.9 9.1 8.3 8.8 8.6L6.6 10.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <span>(555) 102-3847</span>
+      </a>
+      <a class="btn btn-primary" href="#quote">Request a quote</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO + FORM ================= -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="plate-label">Serving customers across the US</p>
+      <h1>Used auto parts,<br>pulled, tested, and<br>ready to ship.</h1>
+      <p class="hero-about"><strong>About Envy Motorparts.</strong> We supply quality new and tested used auto parts, backed by honest fitment advice, careful testing, and dependable service.</p>
+      <p class="hero-sub">We pull, bench-test, and grade every part before it leaves the yard. Tell us what your vehicle needs below and the owner will get back to you directly, usually within one business day.</p>
+      <div class="trust-row">
+        <div class="trust-item">
+          <strong>7,400+</strong>
+          <span>parts shipped</span>
+        </div>
+        <div class="trust-item">
+          <strong>90 day</strong>
+          <span>warranty on tested parts</span>
+        </div>
+        <div class="trust-item">
+          <strong>48 state</strong>
+          <span>shipping coverage</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-card" id="quote">
+      <div class="quote-card-head">
+        <span class="ticket-no">Work order</span>
+        <span class="ticket-status">Open</span>
+      </div>
+      <h2>Request a part quote</h2>
+      <p class="quote-sub">Goes straight to the owner — no call center, no middleman.</p>
+      <div class="owner-connect" aria-label="Connect directly with the owner">
+        <a class="owner-connect-action" href="tel:+15551023847">
+          <span class="owner-connect-icon" aria-hidden="true">&#9742;</span>
+          <span><strong>Call the owner</strong><small>(555) 102-3847</small></span>
+        </a>
+        <a class="owner-connect-action" href="mailto:hello@envymotorparts.example?subject=Envy%20Motorparts%20part%20question">
+          <span class="owner-connect-icon" aria-hidden="true">&#9993;</span>
+          <span><strong>Email the owner</strong><small>hello@envymotorparts.example</small></span>
+        </a>
+        <a class="owner-connect-action" href="https://wa.me/15551023847?text=Hi%20Envy%20Motorparts%2C%20I%27d%20like%20help%20finding%20a%20part." target="_blank" rel="noopener noreferrer">
+          <span class="owner-connect-icon whatsapp-icon" aria-hidden="true">&#9673;</span>
+          <span><strong>WhatsApp owner</strong><small>Message us directly</small></span>
+        </a>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+            <span class="field-error" data-error-for="fullName"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" required>
+            <span class="field-error" data-error-for="phone"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="field-error" data-error-for="email"></span>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="partNeeded">Part needed</label>
+            <select id="partNeeded" name="partNeeded" required>
+              <option value="" disabled selected>Select a part</option>
+            </select>
+            <span class="field-error" data-error-for="partNeeded"></span>
+          </div>
+          <div class="field">
+            <label for="zip">ZIP code</label>
+            <input type="text" id="zip" name="zip" inputmode="numeric" placeholder="90210" required>
+            <span class="field-error" data-error-for="zip"></span>
+          </div>
+        </div>
+
+        <div class="field-row three">
+          <div class="field">
+            <label for="year">Vehicle year</label>
+            <input type="text" id="year" name="year" inputmode="numeric" placeholder="2016" required>
+            <span class="field-error" data-error-for="year"></span>
+          </div>
+          <div class="field">
+            <label for="make">Make</label>
+            <input type="text" id="make" name="make" placeholder="Honda" required>
+            <span class="field-error" data-error-for="make"></span>
+          </div>
+          <div class="field">
+            <label for="model">Model</label>
+            <input type="text" id="model" name="model" placeholder="Accord" required>
+            <span class="field-error" data-error-for="model"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Anything else the owner should know</label>
+          <textarea id="message" name="message" rows="3" placeholder="Trim level, VIN, part number, photos on request..."></textarea>
+          <span class="field-error" data-error-for="message"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+          <span class="btn-label">Send to owner</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+        <p class="form-note">Submitting opens your email app addressed to the owner with your request filled in.</p>
+      </form>
+
+      <div class="quote-success" id="quoteSuccess" hidden>
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+          <circle cx="23" cy="23" r="21" stroke="currentColor" stroke-width="2.5"/>
+          <path id="checkPath" d="M14 23.5L20 29.5L32 16.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Request ready to send</h3>
+        <p>Your email app should now be open with the request addressed to the owner. If it didn't open, email us directly at <a href="mailto:hello@envymotorparts.example">hello@envymotorparts.example</a>.</p>
+        <button type="button" class="btn btn-ghost" id="newRequestBtn">Start another request</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stripe" aria-hidden="true"></div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="why-us" id="why-us">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Why buy from a yard the owner still runs</h2>
+      <p>No franchise script, no upsell quota. Every quote is priced and answered by the person who pulled the part.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M8 28L20 8L32 28H8Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M14 24H26" stroke="currentColor" stroke-width="2.2"/></svg>
+        </div>
+        <h3>Bench-tested before listing</h3>
+        <p>Electrical and rotating parts are tested on the bench before they're graded and priced, not just eyeballed off the vehicle.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><rect x="7" y="11" width="26" height="18" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M7 17H33" stroke="currentColor" stroke-width="2.2"/><path d="M13 23H19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>90-day part warranty</h3>
+        <p>If a tested part fails to perform as described within 90 days, we replace it or refund the part cost.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M6 24L12 12H28L34 24" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><rect x="6" y="24" width="28" height="7" rx="1.5" stroke="currentColor" stroke-width="2.2"/><circle cx="13" cy="31" r="2.4" stroke="currentColor" stroke-width="2"/><circle cx="27" cy="31" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Shipped to 48 states</h3>
+        <p>Freight and small-parcel accounts already set up, so a quote includes real shipping cost, not a placeholder.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="15" r="6" stroke="currentColor" stroke-width="2.2"/><path d="M9 33C9 26.4 13.9 22 20 22C26.1 22 31 26.4 31 33" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>You talk to the owner</h3>
+        <p>Quotes, part condition questions, and order updates come from the person running the yard, not a shared inbox.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INVENTORY ================= -->
+<section class="inventory" id="inventory">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Current parts catalog</h2>
+      <p>Shop quality new parts and tested used OEM components. Don't see your exact part or need a fitment checked? Send a request — most vehicles in our network aren't listed here yet.</p>
+    </div>
+    <div class="inventory-grid" id="inventoryGrid">
+      <!-- cards injected by script.js from PARTS_INVENTORY -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head light">
+      <h2>How a request becomes a shipment</h2>
+      <p>Four steps, no account required.</p>
+    </div>
+    <ol class="process-list">
+      <li>
+        <span class="process-num">01</span>
+        <div>
+          <h3>Submit the work order</h3>
+          <p>Tell us the part, your ZIP, and your vehicle's year, make, and model using the form above.</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-num">02</span>
+        <div>
+          <h3>Owner checks the yard</h3>
+          <p>We confirm we have a matching part in stock or in our partner network and grade its condition.</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-num">03</span>
+        <div>
+          <h3>You get a real quote</h3>
+          <p>A price with shipping included lands in your inbox, usually within one business day.</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-num">04</span>
+        <div>
+          <h3>Part ships to your door</h3>
+          <p>Once you approve, the part is packed and shipped with tracking sent to your email.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CONTACT / FOOTER ================= -->
+<footer class="site-footer" id="contact">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5H43L39 13H18L16 18H37L33 25H13L10 33H31L25 42H4L8 30L14 17L8 17L4 26L8 5Z" fill="currentColor"/>
+            <path d="M18 18H37L34 23H16L18 18ZM13 28H32L29 33H11L13 28Z" fill="#090A0C"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">ENVY</span>
+          <span class="brand-sub">AUTO PARTS</span>
+        </span>
+      </a>
+      <p class="footer-blurb">Family-run auto parts yard shipping tested used and OEM parts across the United States.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Reach the owner</h4>
+      <ul class="footer-list">
+        <li><a href="tel:+15551023847">(555) 102-3847</a></li>
+        <li><a href="mailto:hello@envymotorparts.example">hello@envymotorparts.example</a></li>
+        <li>Mon&ndash;Sat, 8:00 AM&ndash;6:00 PM CST</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Yard location</h4>
+      <ul class="footer-list">
+        <li>4210 Route 9 Industrial Row</li>
+        <li>Envy, TX 75001</li>
+        <li>Local pickup by appointment</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul class="footer-list">
+        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#why-us">Why us</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#quote">Request a quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="currentYear"></span> Envy Motorparts. All parts sold as used unless noted.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
