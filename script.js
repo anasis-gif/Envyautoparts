@@ -50,42 +50,38 @@ const PARTS_INVENTORY = [
   { name: "Control arm", icon: "disc", note: "Bushings and ball joint play measured before grading." }
 ];
 
-const PART_IMAGES = {
-  engine: "https://commons.wikimedia.org/wiki/Special:FilePath/Car%20engine.jpg?width=900",
-  gearbox: "https://commons.wikimedia.org/wiki/Special:FilePath/Gearbox.jpg?width=900",
-  alternator: "https://commons.wikimedia.org/wiki/Special:FilePath/Alternator.jpg?width=900",
-  radiator: "https://commons.wikimedia.org/wiki/Special:FilePath/Automobile%20radiator.jpg?width=900",
-  brakes: "https://commons.wikimedia.org/wiki/Special:FilePath/Disc%20brake.jpg?width=900",
-  battery: "https://commons.wikimedia.org/wiki/Special:FilePath/Car%20battery.jpg?width=900",
-  wheel: "https://commons.wikimedia.org/wiki/Special:FilePath/Car%20wheel.jpg?width=900",
-  service: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80"
+const PART_IMAGE_FILES = {
+  "Engine": "engine.JPG",
+  "Transmission": "automatic transmission.JPG",
+  "Alternator": "alternator.JPG",
+  "Carburetor": "carburator.JPG",
+  "AC compressor": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/AC_compressor.jpg/960px-AC_compressor.jpg",
+  "AC condenser": "ac condenser.JPG",
+  "Radiator": "radiator.JPG",
+  "Radio": "radio.JPG",
+  "Rotors & pads": "rotor and pads.JPG",
+  "O2 sensor": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Lambda_sond_till_volvo240_etc.jpg/960px-Lambda_sond_till_volvo240_etc.jpg",
+  "Air filter": "air filter.JPG",
+  "Headlights": "headlight.JPG",
+  "Taillights": "tail light.JPG",
+  "Struts": "strut.webp",
+  "CV axle": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/2008-04-23_Cracked_CV_boot.jpg/960px-2008-04-23_Cracked_CV_boot.jpg",
+  "Water pump": "water pump.JPG",
+  "Power steering pump": "power steering pump.JPG",
+  "Air bag": "https://upload.wikimedia.org/wikipedia/commons/b/bd/AIRBAG_driver_for_automotive.jpg",
+  "Dash pad": "dashboard panel.JPG",
+  "Key fob": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/2020_Ford_key_fob_inside_look.jpg/960px-2020_Ford_key_fob_inside_look.jpg",
+  "Seatbelt": "seatbelt.jpg",
+  "Fuel pump": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Inline_EDC_pump.JPG/960px-Inline_EDC_pump.JPG",
+  "Ignition switch": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Push_Ignition_-_2013_Lexus_LS_460_%289864306393%29.jpg/960px-Push_Ignition_-_2013_Lexus_LS_460_%289864306393%29.jpg",
+  "Speedometer": "speedometer.JPG",
+  "Control arm": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Semi-trailing_arm_geometry_%28Ford_Sierra_rear_suspension%29.jpg/960px-Semi-trailing_arm_geometry_%28Ford_Sierra_rear_suspension%29.jpg"
 };
 
 function getPartVisual(partName) {
-  const name = partName.toLowerCase();
-  if (/engine/.test(name)) return { image: PART_IMAGES.engine, label: "ENGINE" };
-  if (/transmission/.test(name)) return { image: PART_IMAGES.gearbox, label: "TRANSMISSION" };
-  if (/alternator/.test(name)) return { image: PART_IMAGES.alternator, label: "ALTERNATOR" };
-  if (/radiator/.test(name)) return { image: PART_IMAGES.radiator, label: "RADIATOR" };
-  if (/rotors|pads/.test(name)) return { image: PART_IMAGES.brakes, label: "BRAKES" };
-  if (/battery|ignition|key fob/.test(name)) return { image: PART_IMAGES.battery, label: "ELECTRICAL" };
-  if (/wheel|tire/.test(name)) return { image: PART_IMAGES.wheel, label: "WHEEL / FITMENT" };
-  if (/carburetor|cv axle|water pump|fuel pump|control arm/.test(name)) {
-    return { image: PART_IMAGES.engine, label: "DRIVETRAIN" };
-  }
-  if (/alternator|radio|o2 sensor|key fob|ignition|speedometer/.test(name)) {
-    return { image: PART_IMAGES.alternator, label: "ELECTRICAL" };
-  }
-  if (/radiator|condenser|compressor|air filter/.test(name)) {
-    return { image: PART_IMAGES.radiator, label: "SERVICE" };
-  }
-  if (/rotors|struts|disc|seatbelt|air bag/.test(name)) {
-    return { image: PART_IMAGES.brakes, label: "SAFETY / CHASSIS" };
-  }
-  if (/headlights|taillights|dash|power steering/.test(name)) {
-    return { image: PART_IMAGES.wheel, label: "EXTERIOR" };
-  }
-  return { image: PART_IMAGES.service, label: "TESTED PART" };
+  const imageFile = PART_IMAGE_FILES[partName] || "engine.JPG";
+  const image = imageFile.startsWith("http") ? imageFile : encodeURI(imageFile);
+  return { image, label: partName.toUpperCase() };
 }
 
 /* =========================================================
